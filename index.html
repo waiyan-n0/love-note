@@ -17,7 +17,7 @@
     <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
     <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
-    <script src="https://kit.fontawesome.com/f4955bc927.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/f4955bc927.js" crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -52,7 +52,7 @@
             <canvas id="canvas" width="1500" height="680"></canvas>
         </div>
         <div id="music-btn">
-            <i class="fa-solid fa-volume-high"></i>
+            <img src="./cd.png" alt="cd" class="cd">
             <audio preload="auto" id="media" src="kissme.mp3" loop="loop"></audio>
         </div>
     </div>
@@ -63,17 +63,15 @@
         
         var audio = document.getElementById('media');
         var musicBtn = document.getElementById('music-btn');
-        var icon = musicBtn.querySelector('i');
+        var cd = document.getElementsByClassName('cd')[0];
 
         musicBtn.addEventListener('click', function() {
             if (audio.paused) {
                 audio.play();
-                icon.classList.remove('fa-volume-xmark');
-                icon.classList.add('fa-volume-high');
+                cd.classList.add("spin");
             } else {
                 audio.pause();
-                icon.classList.remove('fa-volume-high');
-                icon.classList.add('fa-volume-xmark');
+                cd.classList.remove("spin");
             }
         });
 
@@ -135,6 +133,8 @@
 
             canvas.click(function (e) {
                 audio.play();
+                cd.classList.add("spin");
+
                 var offset = canvas.offset(), x, y;
                 x = e.pageX - offset.left;
                 y = e.pageY - offset.top;
