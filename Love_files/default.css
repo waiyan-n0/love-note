@@ -95,20 +95,18 @@ a {
 	justify-content: right;
 	gap: 10px;
 }
-#music-btn {
-	background-color: #ffff;
-	color: #b76e79;
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	padding: 10px;
-	border-radius: 50%;
-	color: white;
-	cursor: pointer;
-	box-shadow: 0 10px 0px rgba(0, 0, 0, 0.2);
+.cd{
+	height: 50px;
+	width: auto;
+	transition: transform 0.3s ease;
 }
 
-.fa-solid{
-	font-size: 25px;
-	color: #b76e79;
+.spin {
+    animation: spin 3s linear infinite;
 }
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
