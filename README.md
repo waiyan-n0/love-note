@@ -13,11 +13,5 @@ Credit to 'https://guoqi.dev/'
 
 * ## 📈 Goals
 * This repository is a personal milestone.📑
-*
 * As a programmer, I believe the best way to preserve something precious is to build a record of it.
-
 * And I want to remember what I did for my fiancé when I was a novice programmer.
-
-*  
-
-
